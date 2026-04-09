@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,17 +19,6 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: {
-                        bg: '#0a0a0a',
-                        surface: '#111111',
-                        border: '#1f1f1f',
-                        accent: '#00ff88',
-                        'accent-hover': '#00cc6a',
-                        text: {
-                            primary: '#fafafa',
-                            secondary: '#888888'
-                        }
-                    },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif']
                     }
@@ -48,29 +37,29 @@
 
     <title>Pranjal Shukla | Data Science Manager & AI Architect</title>
 </head>
-<body class="dark bg-bg dark:bg-bg text-text-primary font-sans antialiased">
+<body class="font-sans antialiased bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-gray-200 dark:border-[#1f1f1f]">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="text-lg font-bold text-accent">PS</a>
+            <a href="#" class="text-lg font-bold text-[#00ff88]">PS</a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="#about" class="nav-link text-text-secondary hover:text-text-primary transition-colors">About</a>
-                <a href="#experience" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Experience</a>
-                <a href="#projects" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Projects</a>
-                <a href="#skills" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Skills</a>
-                <a href="#contact" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Contact</a>
+                <a href="#about" class="nav-link text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+                <a href="#experience" class="nav-link text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="nav-link text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="#skills" class="nav-link text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Skills</a>
+                <a href="#contact" class="nav-link text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
             </div>
             <div class="flex items-center gap-4">
                 <!-- Theme Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-lg bg-surface dark:bg-surface border border-border hover:border-accent transition-colors" aria-label="Toggle theme">
-                    <svg class="w-5 h-5 text-text-primary hidden dark:block" fill="currentColor" viewBox="0 0 24 24">
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-[#111111] border border-gray-200 dark:border-[#1f1f1f] hover:border-[#00ff88] transition-colors" aria-label="Toggle theme">
+                    <svg class="w-5 h-5 text-gray-900 dark:text-white hidden dark:block" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                     </svg>
-                    <svg class="w-5 h-5 text-text-primary block dark:hidden" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-900 dark:text-white block dark:hidden" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                     </svg>
                 </button>
-                <button id="mobile-menu-btn" class="md:hidden text-text-primary">
+                <button id="mobile-menu-btn" class="md:hidden text-gray-900 dark:text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -78,13 +67,13 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border">
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#111111] border-b border-gray-200 dark:border-[#1f1f1f]">
             <div class="px-6 py-4 flex flex-col gap-4">
-                <a href="#about" class="text-text-secondary hover:text-text-primary transition-colors">About</a>
-                <a href="#experience" class="text-text-secondary hover:text-text-primary transition-colors">Experience</a>
-                <a href="#projects" class="text-text-secondary hover:text-text-primary transition-colors">Projects</a>
-                <a href="#skills" class="text-text-secondary hover:text-text-primary transition-colors">Skills</a>
-                <a href="#contact" class="text-text-secondary hover:text-text-primary transition-colors">Contact</a>
+                <a href="#about" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+                <a href="#experience" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="#skills" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Skills</a>
+                <a href="#contact" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -93,16 +82,16 @@
     <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
         <!-- Background Pattern -->
         <div class="absolute inset-0 bg-grid opacity-20"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/95 to-bg"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white dark:from-[#0a0a0a] dark:via-[#0a0a0a]/95 dark:to-[#0a0a0a]"></div>
 
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
             <div class="fade-in">
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
-                    <span class="text-text-primary">Pranjal</span>
+                    <span class="text-gray-900 dark:text-white">Pranjal</span>
                     <span class="gradient-text"> Shukla</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-text-secondary font-medium mb-2">Data Science Manager | AI & Cloud Architect</p>
-                <p class="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">Building intelligent systems that drive business impact</p>
+                <p class="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-medium mb-2">Data Science Manager | AI & Cloud Architect</p>
+                <p class="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">Building intelligent systems that drive business impact</p>
             </div>
 
             <div class="fade-in flex flex-wrap justify-center gap-4 mb-12">
@@ -116,17 +105,17 @@
             </div>
 
             <div class="fade-in flex justify-center gap-6">
-                <a href="mailto:pranjalshukla98@gmail.com" class="text-text-secondary hover:text-accent transition-colors" aria-label="Email">
+                <a href="mailto:pranjalshukla98@gmail.com" class="text-gray-500 dark:text-gray-400 hover:text-[#00ff88] transition-colors" aria-label="Email">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                 </a>
-                <a href="https://linkedin.com/in/pranjalshukla98" target="_blank" rel="noopener" class="text-text-secondary hover:text-accent transition-colors" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/pranjalshukla98" target="_blank" rel="noopener" class="text-gray-500 dark:text-gray-400 hover:text-[#00ff88] transition-colors" aria-label="LinkedIn">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                     </svg>
                 </a>
-                <a href="https://github.com/pranjals26" target="_blank" rel="noopener" class="text-text-secondary hover:text-accent transition-colors" aria-label="GitHub">
+                <a href="https://github.com/pranjals26" target="_blank" rel="noopener" class="text-gray-500 dark:text-gray-400 hover:text-[#00ff88] transition-colors" aria-label="GitHub">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
                     </svg>
@@ -136,56 +125,53 @@
 
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
             </svg>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 px-6">
+    <section id="about" class="py-24 px-6 bg-gray-50 dark:bg-[#111111]/50">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-3 gap-12 items-center">
                 <div class="fade-in md:col-span-1 flex justify-center">
                     <div class="relative">
-                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-surface border border-border overflow-hidden">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-[#1f1f1f] overflow-hidden">
                             <img src="assets/images/Passport Size Digital Copy.jpg" alt="Pranjal Shukla" class="w-full h-full object-cover">
-                        </div>
-                        <div class="absolute -bottom-2 -right-2 w-16 h-16 bg-accent/20 rounded-xl border border-accent/30 flex items-center justify-center">
-                            <span class="text-accent text-sm font-bold">5+</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="fade-in md:col-span-2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
-                    <p class="text-text-secondary text-lg leading-relaxed mb-4">
-                        Data Science Manager with <span class="text-accent">5+ years</span> of experience in AI/ML and cloud architecture.
-                        Currently leading a <span class="text-accent">7-member team</span> at Shriram Finance, driving digital innovation
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">About Me</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-4">
+                        Data Science Manager with <span class="text-[#00ff88]">5+ years</span> of experience in AI/ML and cloud architecture.
+                        Currently leading a <span class="text-[#00ff88]">7-member team</span> at Shriram Finance, driving digital innovation
                         through intelligent systems and predictive modeling.
                     </p>
-                    <p class="text-text-secondary text-lg leading-relaxed mb-6">
-                        Specialized in building <span class="text-text-primary">Agentic RAG platforms</span>,
-                        <span class="text-text-primary">LLM fine-tuning pipelines</span>, and
-                        <span class="text-text-primary">serverless GenAI architectures</span> that deliver measurable business impact.
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                        Specialized in building <span class="text-gray-900 dark:text-white font-medium">Agentic RAG platforms</span>,
+                        <span class="text-gray-900 dark:text-white font-medium">LLM fine-tuning pipelines</span>, and
+                        <span class="text-gray-900 dark:text-white font-medium">serverless GenAI architectures</span> that deliver measurable business impact.
                     </p>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div class="stat-card">
-                            <span class="text-2xl font-bold text-accent">₹298Cr</span>
-                            <p class="text-sm text-text-secondary">Monthly Conversions</p>
+                            <span class="text-2xl font-bold text-[#00ff88]">₹298Cr</span>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Monthly Conversions</p>
                         </div>
                         <div class="stat-card">
-                            <span class="text-2xl font-bold text-accent">60M+</span>
-                            <p class="text-sm text-text-secondary">SMS Processed</p>
+                            <span class="text-2xl font-bold text-[#00ff88]">60M+</span>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">SMS Processed</p>
                         </div>
                         <div class="stat-card">
-                            <span class="text-2xl font-bold text-accent">75%</span>
-                            <p class="text-sm text-text-secondary">Cost Reduction</p>
+                            <span class="text-2xl font-bold text-[#00ff88]">75%</span>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Cost Reduction</p>
                         </div>
                         <div class="stat-card">
-                            <span class="text-2xl font-bold text-accent">80%</span>
-                            <p class="text-sm text-text-secondary">Risk Capture Rate</p>
+                            <span class="text-2xl font-bold text-[#00ff88]">80%</span>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Risk Capture Rate</p>
                         </div>
                     </div>
                 </div>
@@ -194,38 +180,38 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-24 px-6 bg-surface/50">
+    <section id="experience" class="py-24 px-6 bg-white dark:bg-[#0a0a0a]">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">Experience</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in text-gray-900 dark:text-white">Experience</h2>
 
             <div class="relative">
                 <!-- Timeline Line -->
-                <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2"></div>
+                <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gray-200 dark:bg-[#1f1f1f] md:-translate-x-1/2"></div>
 
                 <!-- Experience Items -->
                 <div class="space-y-12">
                     <!-- Shriram Finance -->
                     <div class="fade-in relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
                         <div class="md:text-right md:pr-8">
-                            <span class="text-accent text-sm font-medium">Dec 2024 - Present</span>
-                            <h3 class="text-xl font-bold mt-1">Data Science Manager</h3>
-                            <p class="text-text-secondary">Shriram Finance | Bangalore, India</p>
+                            <span class="text-[#00ff88] text-sm font-medium">Dec 2024 - Present</span>
+                            <h3 class="text-xl font-bold mt-1 text-gray-900 dark:text-white">Data Science Manager</h3>
+                            <p class="text-gray-500 dark:text-gray-400">Shriram Finance | Bangalore, India</p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-accent rounded-full md:-translate-x-1/2"></div>
+                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-[#00ff88] rounded-full md:-translate-x-1/2"></div>
                         <div class="mt-4 md:mt-0 md:pl-8">
                             <div class="experience-card">
-                                <ul class="space-y-2 text-text-secondary">
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>Leading a <strong class="text-text-primary">7-member team</strong> in AI & Data Science division</span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>Leading a <strong class="text-gray-900 dark:text-white">7-member team</strong> in AI & Data Science division</span>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>Built Agentic RAG platform: <strong class="text-text-primary">15% FD conversion uplift</strong></span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>Built Agentic RAG platform: <strong class="text-gray-900 dark:text-white">15% FD conversion uplift</strong></span>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>LLM fine-tuning engine processing <strong class="text-text-primary">60M+ SMS</strong></span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>LLM fine-tuning engine processing <strong class="text-gray-900 dark:text-white">60M+ SMS</strong></span>
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -241,24 +227,24 @@
                     <!-- Latent Plane -->
                     <div class="fade-in relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
                         <div class="md:text-right md:pr-8">
-                            <span class="text-accent text-sm font-medium">Sep 2023 - Dec 2024</span>
-                            <h3 class="text-xl font-bold mt-1">Data Solution Architect</h3>
-                            <p class="text-text-secondary">Latent Plane | London, UK</p>
+                            <span class="text-[#00ff88] text-sm font-medium">Sep 2023 - Dec 2024</span>
+                            <h3 class="text-xl font-bold mt-1 text-gray-900 dark:text-white">Data Solution Architect</h3>
+                            <p class="text-gray-500 dark:text-gray-400">Latent Plane | London, UK</p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-accent rounded-full md:-translate-x-1/2"></div>
+                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-[#00ff88] rounded-full md:-translate-x-1/2"></div>
                         <div class="mt-4 md:mt-0 md:pl-8">
                             <div class="experience-card">
-                                <ul class="space-y-2 text-text-secondary">
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>Engineered async infrastructure: <strong class="text-text-primary">95% resolution, &lt;2s latency</strong></span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>Engineered async infrastructure: <strong class="text-gray-900 dark:text-white">95% resolution, &lt;2s latency</strong></span>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>Reduced annual support costs by <strong class="text-text-primary">~75%</strong></span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>Reduced annual support costs by <strong class="text-gray-900 dark:text-white">~75%</strong></span>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
                                         <span>Claude 3 orchestration for intent analysis</span>
                                     </li>
                                 </ul>
@@ -275,21 +261,21 @@
                     <!-- Datalink Software -->
                     <div class="fade-in relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
                         <div class="md:text-right md:pr-8">
-                            <span class="text-accent text-sm font-medium">May 2023 - Sep 2023</span>
-                            <h3 class="text-xl font-bold mt-1">Product Manager Intern</h3>
-                            <p class="text-text-secondary">Datalink Software | Tampa, Florida</p>
+                            <span class="text-[#00ff88] text-sm font-medium">May 2023 - Sep 2023</span>
+                            <h3 class="text-xl font-bold mt-1 text-gray-900 dark:text-white">Product Manager Intern</h3>
+                            <p class="text-gray-500 dark:text-gray-400">Datalink Software | Tampa, Florida</p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-accent rounded-full md:-translate-x-1/2"></div>
+                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-[#00ff88] rounded-full md:-translate-x-1/2"></div>
                         <div class="mt-4 md:mt-0 md:pl-8">
                             <div class="experience-card">
-                                <ul class="space-y-2 text-text-secondary">
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>Databricks ETL for <strong class="text-text-primary">10,000+ patient records</strong></span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>Databricks ETL for <strong class="text-gray-900 dark:text-white">10,000+ patient records</strong></span>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>Delivered <strong class="text-text-primary">12 client features</strong>, 25% efficiency gain</span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>Delivered <strong class="text-gray-900 dark:text-white">12 client features</strong>, 25% efficiency gain</span>
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -304,21 +290,21 @@
                     <!-- Intellexs -->
                     <div class="fade-in relative pl-8 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
                         <div class="md:text-right md:pr-8">
-                            <span class="text-accent text-sm font-medium">June 2020 - Aug 2022</span>
-                            <h3 class="text-xl font-bold mt-1">Technical Associate</h3>
-                            <p class="text-text-secondary">Intellexs Investment Solutions | Noida, India</p>
+                            <span class="text-[#00ff88] text-sm font-medium">June 2020 - Aug 2022</span>
+                            <h3 class="text-xl font-bold mt-1 text-gray-900 dark:text-white">Technical Associate</h3>
+                            <p class="text-gray-500 dark:text-gray-400">Intellexs Investment Solutions | Noida, India</p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-accent rounded-full md:-translate-x-1/2"></div>
+                        <div class="absolute left-0 md:left-1/2 top-1 w-3 h-3 bg-[#00ff88] rounded-full md:-translate-x-1/2"></div>
                         <div class="mt-4 md:mt-0 md:pl-8">
                             <div class="experience-card">
-                                <ul class="space-y-2 text-text-secondary">
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
                                         <span>Cloud migration to AWS RDS with serverless ETL</span>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-accent mt-1">▸</span>
-                                        <span>Credit risk model: <strong class="text-text-primary">85% accuracy</strong> on 30K portfolio</span>
+                                        <span class="text-[#00ff88] mt-1">▸</span>
+                                        <span>Credit risk model: <strong class="text-gray-900 dark:text-white">85% accuracy</strong> on 30K portfolio</span>
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -336,24 +322,24 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6">
+    <section id="projects" class="py-24 px-6 bg-gray-50 dark:bg-[#111111]/50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">Signature Projects</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in text-gray-900 dark:text-white">Signature Projects</h2>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Project 1: Agentic RAG -->
                 <div class="fade-in project-card group">
                     <div class="flex items-start justify-between mb-4">
                         <div>
-                            <h3 class="text-xl font-bold group-hover:text-accent transition-colors">Agentic RAG Platform</h3>
-                            <p class="text-text-secondary text-sm">Shriram Finance</p>
+                            <h3 class="text-xl font-bold group-hover:text-[#00ff88] transition-colors text-gray-900 dark:text-white">Agentic RAG Platform</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Shriram Finance</p>
                         </div>
                         <div class="metric-badge">
-                            <span class="text-accent font-bold">+15%</span>
-                            <span class="text-xs text-text-secondary">Conversion</span>
+                            <span class="text-[#00ff88] font-bold">+15%</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Conversion</span>
                         </div>
                     </div>
-                    <p class="text-text-secondary mb-4">
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
                         Multi-tool Fixed Deposit Agent using AWS Bedrock and Strands SDK with real-time financial data retrieval.
                         Built semantic routing framework for complex query resolution.
                     </p>
@@ -363,7 +349,7 @@
                             <span class="tech-tag">Strands SDK</span>
                             <span class="tech-tag">Crawl4AI</span>
                         </div>
-                        <span class="text-accent text-sm font-medium">₹298Cr/mo</span>
+                        <span class="text-[#00ff88] text-sm font-medium">₹298Cr/mo</span>
                     </div>
                 </div>
 
@@ -371,15 +357,15 @@
                 <div class="fade-in project-card group">
                     <div class="flex items-start justify-between mb-4">
                         <div>
-                            <h3 class="text-xl font-bold group-hover:text-accent transition-colors">LLM Fine-Tuning Engine</h3>
-                            <p class="text-text-secondary text-sm">Shriram Finance</p>
+                            <h3 class="text-xl font-bold group-hover:text-[#00ff88] transition-colors text-gray-900 dark:text-white">LLM Fine-Tuning Engine</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Shriram Finance</p>
                         </div>
                         <div class="metric-badge">
-                            <span class="text-accent font-bold">60M+</span>
-                            <span class="text-xs text-text-secondary">SMS</span>
+                            <span class="text-[#00ff88] font-bold">60M+</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">SMS</span>
                         </div>
                     </div>
-                    <p class="text-text-secondary mb-4">
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
                         End-to-end SMS Engine using Gemma 3 27B fine-tuned with Unsloth. Multi-stage pipeline from noise removal
                         to cohort generation, identifying 50+ financial and behavioral segments.
                     </p>
@@ -389,7 +375,7 @@
                             <span class="tech-tag">Unsloth</span>
                             <span class="tech-tag">MoEngage</span>
                         </div>
-                        <span class="text-accent text-sm font-medium">50+ Segments</span>
+                        <span class="text-[#00ff88] text-sm font-medium">50+ Segments</span>
                     </div>
                 </div>
 
@@ -397,15 +383,15 @@
                 <div class="fade-in project-card group">
                     <div class="flex items-start justify-between mb-4">
                         <div>
-                            <h3 class="text-xl font-bold group-hover:text-accent transition-colors">Predictive Collection Model</h3>
-                            <p class="text-text-secondary text-sm">Shriram Finance</p>
+                            <h3 class="text-xl font-bold group-hover:text-[#00ff88] transition-colors text-gray-900 dark:text-white">Predictive Collection Model</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Shriram Finance</p>
                         </div>
                         <div class="metric-badge">
-                            <span class="text-accent font-bold">80%</span>
-                            <span class="text-xs text-text-secondary">Capture Rate</span>
+                            <span class="text-[#00ff88] font-bold">80%</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Capture Rate</span>
                         </div>
                     </div>
-                    <p class="text-text-secondary mb-4">
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
                         CatBoost-based bounce prediction classification model with 70+ engineered features. Enabled prioritized
                         collection strategies and significantly reduced EMI bounce impact.
                     </p>
@@ -415,7 +401,7 @@
                             <span class="tech-tag">Feature Engineering</span>
                             <span class="tech-tag">SQL</span>
                         </div>
-                        <span class="text-accent text-sm font-medium">₹70Cr/mo</span>
+                        <span class="text-[#00ff88] text-sm font-medium">₹70Cr/mo</span>
                     </div>
                 </div>
 
@@ -423,15 +409,15 @@
                 <div class="fade-in project-card group">
                     <div class="flex items-start justify-between mb-4">
                         <div>
-                            <h3 class="text-xl font-bold group-hover:text-accent transition-colors">Serverless GenAI Architecture</h3>
-                            <p class="text-text-secondary text-sm">Latent Plane</p>
+                            <h3 class="text-xl font-bold group-hover:text-[#00ff88] transition-colors text-gray-900 dark:text-white">Serverless GenAI Architecture</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Latent Plane</p>
                         </div>
                         <div class="metric-badge">
-                            <span class="text-accent font-bold">75%</span>
-                            <span class="text-xs text-text-secondary">Cost Reduction</span>
+                            <span class="text-[#00ff88] font-bold">75%</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Cost Reduction</span>
                         </div>
                     </div>
-                    <p class="text-text-secondary mb-4">
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
                         Highly scalable async infrastructure using AWS Lambda, API Gateway. Intelligent orchestration with Claude 3
                         for real-time intent and sentiment analysis with 6-year compliance lifecycle.
                     </p>
@@ -441,7 +427,7 @@
                             <span class="tech-tag">AWS Lambda</span>
                             <span class="tech-tag">MongoDB</span>
                         </div>
-                        <span class="text-accent text-sm font-medium">&lt;2s latency</span>
+                        <span class="text-[#00ff88] text-sm font-medium">&lt;2s latency</span>
                     </div>
                 </div>
             </div>
@@ -449,18 +435,18 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-24 px-6 bg-surface/50">
+    <section id="skills" class="py-24 px-6 bg-white dark:bg-[#0a0a0a]">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">Skills & Certifications</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center fade-in text-gray-900 dark:text-white">Skills & Certifications</h2>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Skills -->
                 <div class="fade-in">
-                    <h3 class="text-xl font-bold mb-6">Technical Skills</h3>
+                    <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-white">Technical Skills</h3>
 
                     <div class="space-y-6">
                         <div>
-                            <h4 class="text-accent text-sm font-medium mb-3">AI & Machine Learning</h4>
+                            <h4 class="text-[#00ff88] text-sm font-medium mb-3">AI & Machine Learning</h4>
                             <div class="flex flex-wrap gap-2">
                                 <span class="skill-tag">Machine Learning</span>
                                 <span class="skill-tag">Deep Learning</span>
@@ -473,7 +459,7 @@
                         </div>
 
                         <div>
-                            <h4 class="text-accent text-sm font-medium mb-3">Generative AI & LLMs</h4>
+                            <h4 class="text-[#00ff88] text-sm font-medium mb-3">Generative AI & LLMs</h4>
                             <div class="flex flex-wrap gap-2">
                                 <span class="skill-tag">LangChain</span>
                                 <span class="skill-tag">RAG</span>
@@ -486,7 +472,7 @@
                         </div>
 
                         <div>
-                            <h4 class="text-accent text-sm font-medium mb-3">Cloud & Infrastructure</h4>
+                            <h4 class="text-[#00ff88] text-sm font-medium mb-3">Cloud & Infrastructure</h4>
                             <div class="flex flex-wrap gap-2">
                                 <span class="skill-tag">AWS</span>
                                 <span class="skill-tag">Lambda</span>
@@ -498,7 +484,7 @@
                         </div>
 
                         <div>
-                            <h4 class="text-accent text-sm font-medium mb-3">Leadership</h4>
+                            <h4 class="text-[#00ff88] text-sm font-medium mb-3">Leadership</h4>
                             <div class="flex flex-wrap gap-2">
                                 <span class="skill-tag">Team Management</span>
                                 <span class="skill-tag">Stakeholder Relations</span>
@@ -510,7 +496,7 @@
 
                 <!-- Certifications & Education -->
                 <div class="fade-in">
-                    <h3 class="text-xl font-bold mb-6">Certifications</h3>
+                    <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-white">Certifications</h3>
 
                     <div class="space-y-4 mb-8">
                         <div class="cert-card">
@@ -519,8 +505,8 @@
                                     <span class="text-[#FF9900] font-bold text-sm">AWS</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium">AWS Certified Solutions Architect</h4>
-                                    <p class="text-text-secondary text-sm">Associate</p>
+                                    <h4 class="font-medium text-gray-900 dark:text-white">AWS Certified Solutions Architect</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm">Associate</p>
                                 </div>
                             </div>
                         </div>
@@ -531,8 +517,8 @@
                                     <span class="text-[#FF9900] font-bold text-sm">AWS</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium">AWS Certified Cloud Practitioner</h4>
-                                    <p class="text-text-secondary text-sm">Foundational</p>
+                                    <h4 class="font-medium text-gray-900 dark:text-white">AWS Certified Cloud Practitioner</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm">Foundational</p>
                                 </div>
                             </div>
                         </div>
@@ -543,25 +529,25 @@
                                     <span class="text-[#FF3621] font-bold text-xs">DATA</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium">Databricks Certified Data Engineer</h4>
-                                    <p class="text-text-secondary text-sm">Professional</p>
+                                    <h4 class="font-medium text-gray-900 dark:text-white">Databricks Certified Data Engineer</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm">Professional</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-6">Education</h3>
+                    <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-white">Education</h3>
 
                     <div class="space-y-4">
                         <div class="edu-card">
-                            <h4 class="font-medium">Master's in Business Analytics</h4>
-                            <p class="text-accent text-sm">AI & Cloud Specialization</p>
-                            <p class="text-text-secondary text-sm">George Washington University | 2022-2023</p>
+                            <h4 class="font-medium text-gray-900 dark:text-white">Master's in Business Analytics</h4>
+                            <p class="text-[#00ff88] text-sm">AI & Cloud Specialization</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">George Washington University | 2022-2023</p>
                         </div>
 
                         <div class="edu-card">
-                            <h4 class="font-medium">B.Tech in Computer Science</h4>
-                            <p class="text-text-secondary text-sm">Vellore Institute of Technology | 2016-2020</p>
+                            <h4 class="font-medium text-gray-900 dark:text-white">B.Tech in Computer Science</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Vellore Institute of Technology | 2016-2020</p>
                         </div>
                     </div>
                 </div>
@@ -570,46 +556,46 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6">
+    <section id="contact" class="py-24 px-6 bg-gray-50 dark:bg-[#111111]/50">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Let's Connect</h2>
-            <p class="text-text-secondary text-lg mb-12 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in text-gray-900 dark:text-white">Let's Connect</h2>
+            <p class="text-gray-500 dark:text-gray-400 text-lg mb-12 fade-in">
                 Open to discussing AI/ML opportunities, consulting projects, or just having a conversation about technology.
             </p>
 
             <div class="fade-in grid md:grid-cols-3 gap-6">
                 <a href="mailto:pranjalshukla98@gmail.com" class="contact-card group">
-                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-12 h-12 bg-[#00ff88]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00ff88]/20 transition-colors">
+                        <svg class="w-6 h-6 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="font-medium mb-1">Email</h3>
-                    <p class="text-text-secondary text-sm">pranjalshukla98@gmail.com</p>
+                    <h3 class="font-medium mb-1 text-gray-900 dark:text-white">Email</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm">pranjalshukla98@gmail.com</p>
                 </a>
 
                 <a href="https://linkedin.com/in/pranjalshukla98" target="_blank" rel="noopener" class="contact-card group">
-                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <div class="w-12 h-12 bg-[#00ff88]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00ff88]/20 transition-colors">
+                        <svg class="w-6 h-6 text-[#00ff88]" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                         </svg>
                     </div>
-                    <h3 class="font-medium mb-1">LinkedIn</h3>
-                    <p class="text-text-secondary text-sm">linkedin.com/in/pranjalshukla98</p>
+                    <h3 class="font-medium mb-1 text-gray-900 dark:text-white">LinkedIn</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm">linkedin.com/in/pranjalshukla98</p>
                 </a>
 
                 <a href="https://github.com/pranjals26" target="_blank" rel="noopener" class="contact-card group">
-                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <div class="w-12 h-12 bg-[#00ff88]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00ff88]/20 transition-colors">
+                        <svg class="w-6 h-6 text-[#00ff88]" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
                         </svg>
                     </div>
-                    <h3 class="font-medium mb-1">GitHub</h3>
-                    <p class="text-text-secondary text-sm">github.com/pranjals26</p>
+                    <h3 class="font-medium mb-1 text-gray-900 dark:text-white">GitHub</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm">github.com/pranjals26</p>
                 </a>
             </div>
 
-            <div class="fade-in mt-12 text-text-secondary">
+            <div class="fade-in mt-12 text-gray-500 dark:text-gray-400">
                 <p class="flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -622,21 +608,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 border-t border-border">
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-[#1f1f1f] bg-white dark:bg-[#0a0a0a]">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-text-secondary text-sm">© 2024 Pranjal Shukla. All rights reserved.</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Pranjal Shukla. All rights reserved.</p>
             <div class="flex items-center gap-4">
-                <a href="mailto:pranjalshukla98@gmail.com" class="text-text-secondary hover:text-accent transition-colors">
+                <a href="mailto:pranjalshukla98@gmail.com" class="text-gray-500 dark:text-gray-400 hover:text-[#00ff88] transition-colors">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                 </a>
-                <a href="https://linkedin.com/in/pranjalshukla98" target="_blank" rel="noopener" class="text-text-secondary hover:text-accent transition-colors">
+                <a href="https://linkedin.com/in/pranjalshukla98" target="_blank" rel="noopener" class="text-gray-500 dark:text-gray-400 hover:text-[#00ff88] transition-colors">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                     </svg>
                 </a>
-                <a href="https://github.com/pranjals26" target="_blank" rel="noopener" class="text-text-secondary hover:text-accent transition-colors">
+                <a href="https://github.com/pranjals26" target="_blank" rel="noopener" class="text-gray-500 dark:text-gray-400 hover:text-[#00ff88] transition-colors">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85v2.74c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
                     </svg>

@@ -1,22 +1,4 @@
-/* Custom Styles - Linear-inspired theme with light/dark mode */
-
-/* Light Theme Variables */
-:root {
-    --bg: #fafafa;
-    --surface: #ffffff;
-    --border: #e5e5e5;
-    --text-primary: #0a0a0a;
-    --text-secondary: #666666;
-}
-
-/* Dark Theme Variables */
-.dark {
-    --bg: #0a0a0a;
-    --surface: #111111;
-    --border: #1f1f1f;
-    --text-primary: #fafafa;
-    --text-secondary: #888888;
-}
+/* Custom Styles - Tailwind dark mode compatible */
 
 /* Gradient Text */
 .gradient-text {
@@ -33,20 +15,18 @@
     50% { background-position: 100% 50%; }
 }
 
-/* Background Grid Pattern - Dark */
-.dark .bg-grid {
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-}
-
-/* Background Grid Pattern - Light */
+/* Background Grid Pattern */
 .bg-grid {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
+}
+
+.dark .bg-grid {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 /* Buttons */
@@ -91,7 +71,7 @@
 
 /* Stat Card */
 .stat-card {
-    background: #ffffff;
+    background: white;
     border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1rem;
@@ -111,7 +91,7 @@
 
 /* Experience Card */
 .experience-card {
-    background: #ffffff;
+    background: white;
     border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1.25rem;
@@ -141,7 +121,7 @@
 .skill-tag {
     display: inline-block;
     padding: 0.375rem 0.875rem;
-    background: #ffffff;
+    background: white;
     border: 1px solid #e5e5e5;
     border-radius: 9999px;
     font-size: 0.875rem;
@@ -167,12 +147,12 @@
     border: 1px solid rgba(0, 255, 136, 0.2);
     border-radius: 0.375rem;
     font-size: 0.75rem;
-    color: #666666;
+    color: #6b7280;
     transition: all 0.2s ease;
 }
 
 .dark .tech-tag {
-    color: #888888;
+    color: #9ca3af;
 }
 
 .tech-tag:hover {
@@ -182,7 +162,7 @@
 
 /* Project Card */
 .project-card {
-    background: #ffffff;
+    background: white;
     border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1.5rem;
@@ -217,7 +197,7 @@
 
 /* Cert Card */
 .cert-card {
-    background: #fafafa;
+    background: #f9fafb;
     border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1rem;
@@ -235,7 +215,7 @@
 
 /* Edu Card */
 .edu-card {
-    background: #fafafa;
+    background: #f9fafb;
     border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1rem;
@@ -248,7 +228,7 @@
 
 /* Contact Card */
 .contact-card {
-    background: #ffffff;
+    background: white;
     border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1.5rem;
@@ -263,17 +243,6 @@
 .contact-card:hover {
     border-color: rgba(0, 255, 136, 0.3);
     transform: translateY(-4px);
-}
-
-/* Theme Toggle Button */
-#theme-toggle {
-    background: #ffffff;
-    border-color: #e5e5e5;
-}
-
-.dark #theme-toggle {
-    background: #111111;
-    border-color: #1f1f1f;
 }
 
 /* Fade In Animation */
@@ -293,26 +262,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar - Dark */
-.dark ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-.dark ::-webkit-scrollbar-track {
-    background: #0a0a0a;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-    background: #1f1f1f;
-    border-radius: 4px;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-    background: #00ff88;
-}
-
-/* Custom Scrollbar - Light */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -322,9 +272,17 @@ html {
     background: #f5f5f5;
 }
 
+.dark ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
 ::-webkit-scrollbar-thumb {
     background: #d4d4d4;
     border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
 }
 
 ::-webkit-scrollbar-thumb:hover {
