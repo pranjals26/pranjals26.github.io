@@ -6,27 +6,6 @@
    Dark mode: Vibrant green tones (high contrast on dark)
    ============================================ */
 
-/* Gradient Text - Proper contrast for both themes */
-.gradient-text {
-    /* Light mode: Deep emerald gradient - readable on white */
-    background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradient-shift 3s ease infinite;
-}
-
-.dark .gradient-text {
-    /* Dark mode: Darker muted green - readable on black */
-    background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #34d399 100%);
-}
-
-@keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
 /* Background Grid Pattern */
 .bg-grid {
     background-image:
