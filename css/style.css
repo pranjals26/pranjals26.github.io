@@ -1,13 +1,58 @@
 /* Custom Styles - Tailwind dark mode compatible */
 
-/* Gradient Text */
+/* Accent Colors - Light: emerald-600, Dark: bright green */
+.accent-text {
+    color: #059669;
+}
+
+.dark .accent-text {
+    color: #00ff88;
+}
+
+.accent-bg {
+    background-color: #059669;
+}
+
+.dark .accent-bg {
+    background-color: #00ff88;
+}
+
+.accent-border {
+    border-color: #059669;
+}
+
+.dark .accent-border {
+    border-color: #00ff88;
+}
+
+.accent-bg-light {
+    background-color: rgba(5, 150, 105, 0.1);
+}
+
+.dark .accent-bg-light {
+    background-color: rgba(0, 255, 136, 0.1);
+}
+
+.hover-accent:hover {
+    color: #059669;
+}
+
+.dark .hover-accent:hover {
+    color: #00ff88;
+}
+
+/* Gradient Text - Dark mode: bright green, Light mode: darker green */
 .gradient-text {
-    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 50%, #00ff88 100%);
+    background: linear-gradient(135deg, #059669 0%, #047857 50%, #059669 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: gradient-shift 3s ease infinite;
+}
+
+.dark .gradient-text {
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 50%, #00ff88 100%);
 }
 
 @keyframes gradient-shift {
@@ -29,21 +74,31 @@
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Buttons */
+/* Buttons - Light mode: emerald, Dark mode: bright green */
 .btn-primary {
     display: inline-flex;
     align-items: center;
     padding: 0.75rem 1.5rem;
-    background: #00ff88;
-    color: #0a0a0a;
+    background: #059669;
+    color: white;
     font-weight: 600;
     border-radius: 0.5rem;
     transition: all 0.2s ease;
 }
 
+.dark .btn-primary {
+    background: #00ff88;
+    color: #0a0a0a;
+}
+
 .btn-primary:hover {
-    background: #00cc6a;
+    background: #047857;
     transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(5, 150, 105, 0.3);
+}
+
+.dark .btn-primary:hover {
+    background: #00cc6a;
     box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
 }
 
@@ -107,15 +162,20 @@
     border-color: rgba(0, 255, 136, 0.3);
 }
 
-/* Skill Badges */
+/* Skill Badges - Light: emerald, Dark: bright green */
 .skill-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: rgba(0, 255, 136, 0.1);
-    color: #00ff88;
+    background: rgba(5, 150, 105, 0.1);
+    color: #059669;
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 500;
+}
+
+.dark .skill-badge {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
 }
 
 .skill-tag {
