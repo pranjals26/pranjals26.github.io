@@ -1,49 +1,15 @@
-/* Custom Styles - Tailwind dark mode compatible */
+/* Custom Styles - Proper color theory for both themes */
 
-/* Accent Colors - Light: emerald-600, Dark: bright green */
-.accent-text {
-    color: #059669;
-}
+/* ============================================
+   COLOR SYSTEM
+   Light mode: Deep emerald tones (high contrast on white)
+   Dark mode: Vibrant green tones (high contrast on dark)
+   ============================================ */
 
-.dark .accent-text {
-    color: #00ff88;
-}
-
-.accent-bg {
-    background-color: #059669;
-}
-
-.dark .accent-bg {
-    background-color: #00ff88;
-}
-
-.accent-border {
-    border-color: #059669;
-}
-
-.dark .accent-border {
-    border-color: #00ff88;
-}
-
-.accent-bg-light {
-    background-color: rgba(5, 150, 105, 0.1);
-}
-
-.dark .accent-bg-light {
-    background-color: rgba(0, 255, 136, 0.1);
-}
-
-.hover-accent:hover {
-    color: #059669;
-}
-
-.dark .hover-accent:hover {
-    color: #00ff88;
-}
-
-/* Gradient Text - Dark mode: bright green, Light mode: darker green */
+/* Gradient Text - Proper contrast for both themes */
 .gradient-text {
-    background: linear-gradient(135deg, #059669 0%, #047857 50%, #059669 100%);
+    /* Light mode: Deep emerald gradient - readable on white */
+    background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -52,7 +18,8 @@
 }
 
 .dark .gradient-text {
-    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 50%, #00ff88 100%);
+    /* Dark mode: Darker muted green - readable on black */
+    background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #34d399 100%);
 }
 
 @keyframes gradient-shift {
@@ -63,8 +30,8 @@
 /* Background Grid Pattern */
 .bg-grid {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
 }
 
@@ -74,7 +41,7 @@
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Buttons - Light mode: emerald, Dark mode: bright green */
+/* Buttons - Proper contrast both themes */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -87,19 +54,19 @@
 }
 
 .dark .btn-primary {
-    background: #00ff88;
+    background: #10b981;
     color: #0a0a0a;
 }
 
 .btn-primary:hover {
     background: #047857;
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(5, 150, 105, 0.3);
+    box-shadow: 0 4px 20px rgba(5, 150, 105, 0.25);
 }
 
 .dark .btn-primary:hover {
-    background: #00cc6a;
-    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+    background: #34d399;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
 }
 
 .btn-secondary {
@@ -107,27 +74,32 @@
     align-items: center;
     padding: 0.75rem 1.5rem;
     background: transparent;
-    color: #0a0a0a;
+    color: #1f2937;
     font-weight: 500;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #d1d5db;
     border-radius: 0.5rem;
     transition: all 0.2s ease;
 }
 
 .dark .btn-secondary {
-    color: #fafafa;
-    border-color: #1f1f1f;
+    color: #f3f4f6;
+    border-color: #374151;
 }
 
 .btn-secondary:hover {
-    border-color: #00ff88;
-    color: #00ff88;
+    border-color: #059669;
+    color: #059669;
+}
+
+.dark .btn-secondary:hover {
+    border-color: #10b981;
+    color: #10b981;
 }
 
 /* Stat Card */
 .stat-card {
     background: white;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     padding: 1rem;
     text-align: center;
@@ -135,113 +107,125 @@
 }
 
 .dark .stat-card {
-    background: #111111;
-    border-color: #1f1f1f;
+    background: #111827;
+    border-color: #1f2937;
 }
 
 .stat-card:hover {
-    border-color: #00ff88;
+    border-color: #10b981;
     transform: translateY(-2px);
 }
 
 /* Experience Card */
 .experience-card {
     background: white;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     padding: 1.25rem;
     transition: all 0.2s ease;
 }
 
 .dark .experience-card {
-    background: #111111;
-    border-color: #1f1f1f;
+    background: #111827;
+    border-color: #1f2937;
 }
 
 .experience-card:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: #10b981;
 }
 
-/* Skill Badges - Light: emerald, Dark: bright green */
+/* Skill Badges */
 .skill-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: rgba(5, 150, 105, 0.1);
-    color: #059669;
+    background: #d1fae5;
+    color: #065f46;
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 500;
 }
 
 .dark .skill-badge {
-    background: rgba(0, 255, 136, 0.1);
-    color: #00ff88;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
 }
 
 .skill-tag {
     display: inline-block;
     padding: 0.375rem 0.875rem;
     background: white;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e7eb;
     border-radius: 9999px;
     font-size: 0.875rem;
-    color: #0a0a0a;
+    color: #1f2937;
     transition: all 0.2s ease;
 }
 
 .dark .skill-tag {
-    background: #111111;
-    border-color: #1f1f1f;
-    color: #fafafa;
+    background: #111827;
+    border-color: #374151;
+    color: #f3f4f6;
 }
 
 .skill-tag:hover {
-    border-color: #00ff88;
-    color: #00ff88;
+    border-color: #059669;
+    color: #059669;
+}
+
+.dark .skill-tag:hover {
+    border-color: #34d399;
+    color: #34d399;
 }
 
 .tech-tag {
     display: inline-block;
     padding: 0.25rem 0.625rem;
-    background: rgba(0, 255, 136, 0.05);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
     border-radius: 0.375rem;
     font-size: 0.75rem;
-    color: #6b7280;
+    color: #4b5563;
     transition: all 0.2s ease;
 }
 
 .dark .tech-tag {
+    background: rgba(55, 65, 81, 0.5);
+    border-color: #374151;
     color: #9ca3af;
 }
 
 .tech-tag:hover {
-    border-color: #00ff88;
-    color: #00ff88;
+    border-color: #059669;
+    color: #059669;
+}
+
+.dark .tech-tag:hover {
+    border-color: #34d399;
+    color: #34d399;
 }
 
 /* Project Card */
 .project-card {
     background: white;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     padding: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .dark .project-card {
-    background: #111111;
-    border-color: #1f1f1f;
+    background: #111827;
+    border-color: #1f2937;
 }
 
 .project-card:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: #10b981;
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .dark .project-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Metric Badge */
@@ -250,58 +234,63 @@
     flex-direction: column;
     align-items: flex-end;
     padding: 0.5rem 0.75rem;
-    background: rgba(0, 255, 136, 0.05);
+    background: #ecfdf5;
     border-radius: 0.5rem;
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid #d1fae5;
+}
+
+.dark .metric-badge {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 /* Cert Card */
 .cert-card {
     background: #f9fafb;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     padding: 1rem;
     transition: all 0.2s ease;
 }
 
 .dark .cert-card {
-    background: #0a0a0a;
-    border-color: #1f1f1f;
+    background: #111827;
+    border-color: #1f2937;
 }
 
 .cert-card:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: #10b981;
 }
 
 /* Edu Card */
 .edu-card {
     background: #f9fafb;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     padding: 1rem;
 }
 
 .dark .edu-card {
-    background: #0a0a0a;
-    border-color: #1f1f1f;
+    background: #111827;
+    border-color: #1f2937;
 }
 
 /* Contact Card */
 .contact-card {
     background: white;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     padding: 1.5rem;
     transition: all 0.2s ease;
 }
 
 .dark .contact-card {
-    background: #111111;
-    border-color: #1f1f1f;
+    background: #111827;
+    border-color: #1f2937;
 }
 
 .contact-card:hover {
-    border-color: rgba(0, 255, 136, 0.3);
+    border-color: #10b981;
     transform: translateY(-4px);
 }
 
@@ -329,7 +318,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f5f5f5;
+    background: #f3f4f6;
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -337,25 +326,26 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #d4d4d4;
+    background: #d1d5db;
     border-radius: 4px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background: #1f1f1f;
+    background: #374151;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00ff88;
+    background: #10b981;
 }
 
 /* Selection */
 ::selection {
-    background: rgba(0, 255, 136, 0.3);
+    background: rgba(16, 185, 129, 0.3);
     color: #0a0a0a;
 }
 
 .dark ::selection {
+    background: rgba(52, 211, 153, 0.3);
     color: #fafafa;
 }
 
@@ -371,7 +361,7 @@ html {
     left: 0;
     width: 0;
     height: 2px;
-    background: #00ff88;
+    background: #10b981;
     transition: width 0.2s ease;
 }
 
@@ -393,6 +383,6 @@ html {
 /* Focus States for Accessibility */
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid #00ff88;
+    outline: 2px solid #10b981;
     outline-offset: 2px;
 }
