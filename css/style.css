@@ -1,4 +1,22 @@
-/* Custom Styles - Linear-inspired dark theme */
+/* Custom Styles - Linear-inspired theme with light/dark mode */
+
+/* Light Theme Variables */
+:root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --border: #e5e5e5;
+    --text-primary: #0a0a0a;
+    --text-secondary: #666666;
+}
+
+/* Dark Theme Variables */
+.dark {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --border: #1f1f1f;
+    --text-primary: #fafafa;
+    --text-secondary: #888888;
+}
 
 /* Gradient Text */
 .gradient-text {
@@ -15,11 +33,19 @@
     50% { background-position: 100% 50%; }
 }
 
-/* Background Grid Pattern */
-.bg-grid {
+/* Background Grid Pattern - Dark */
+.dark .bg-grid {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Background Grid Pattern - Light */
+.bg-grid {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
 }
 
@@ -46,11 +72,16 @@
     align-items: center;
     padding: 0.75rem 1.5rem;
     background: transparent;
-    color: #fafafa;
+    color: #0a0a0a;
     font-weight: 500;
-    border: 1px solid #1f1f1f;
+    border: 1px solid #e5e5e5;
     border-radius: 0.5rem;
     transition: all 0.2s ease;
+}
+
+.dark .btn-secondary {
+    color: #fafafa;
+    border-color: #1f1f1f;
 }
 
 .btn-secondary:hover {
@@ -60,12 +91,17 @@
 
 /* Stat Card */
 .stat-card {
-    background: #111111;
-    border: 1px solid #1f1f1f;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1rem;
     text-align: center;
     transition: all 0.2s ease;
+}
+
+.dark .stat-card {
+    background: #111111;
+    border-color: #1f1f1f;
 }
 
 .stat-card:hover {
@@ -75,11 +111,16 @@
 
 /* Experience Card */
 .experience-card {
-    background: #111111;
-    border: 1px solid #1f1f1f;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1.25rem;
     transition: all 0.2s ease;
+}
+
+.dark .experience-card {
+    background: #111111;
+    border-color: #1f1f1f;
 }
 
 .experience-card:hover {
@@ -100,12 +141,18 @@
 .skill-tag {
     display: inline-block;
     padding: 0.375rem 0.875rem;
-    background: #111111;
-    border: 1px solid #1f1f1f;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
     border-radius: 9999px;
     font-size: 0.875rem;
-    color: #fafafa;
+    color: #0a0a0a;
     transition: all 0.2s ease;
+}
+
+.dark .skill-tag {
+    background: #111111;
+    border-color: #1f1f1f;
+    color: #fafafa;
 }
 
 .skill-tag:hover {
@@ -120,8 +167,12 @@
     border: 1px solid rgba(0, 255, 136, 0.2);
     border-radius: 0.375rem;
     font-size: 0.75rem;
-    color: #888888;
+    color: #666666;
     transition: all 0.2s ease;
+}
+
+.dark .tech-tag {
+    color: #888888;
 }
 
 .tech-tag:hover {
@@ -131,16 +182,25 @@
 
 /* Project Card */
 .project-card {
-    background: #111111;
-    border: 1px solid #1f1f1f;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1.5rem;
     transition: all 0.3s ease;
 }
 
+.dark .project-card {
+    background: #111111;
+    border-color: #1f1f1f;
+}
+
 .project-card:hover {
     border-color: rgba(0, 255, 136, 0.3);
     transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark .project-card:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -157,11 +217,16 @@
 
 /* Cert Card */
 .cert-card {
-    background: #0a0a0a;
-    border: 1px solid #1f1f1f;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1rem;
     transition: all 0.2s ease;
+}
+
+.dark .cert-card {
+    background: #0a0a0a;
+    border-color: #1f1f1f;
 }
 
 .cert-card:hover {
@@ -170,24 +235,45 @@
 
 /* Edu Card */
 .edu-card {
-    background: #0a0a0a;
-    border: 1px solid #1f1f1f;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1rem;
 }
 
+.dark .edu-card {
+    background: #0a0a0a;
+    border-color: #1f1f1f;
+}
+
 /* Contact Card */
 .contact-card {
-    background: #111111;
-    border: 1px solid #1f1f1f;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
     border-radius: 0.75rem;
     padding: 1.5rem;
     transition: all 0.2s ease;
 }
 
+.dark .contact-card {
+    background: #111111;
+    border-color: #1f1f1f;
+}
+
 .contact-card:hover {
     border-color: rgba(0, 255, 136, 0.3);
     transform: translateY(-4px);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: #ffffff;
+    border-color: #e5e5e5;
+}
+
+.dark #theme-toggle {
+    background: #111111;
+    border-color: #1f1f1f;
 }
 
 /* Fade In Animation */
@@ -207,18 +293,37 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Dark */
+.dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #00ff88;
+}
+
+/* Custom Scrollbar - Light */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1f1f1f;
+    background: #d4d4d4;
     border-radius: 4px;
 }
 
@@ -229,6 +334,10 @@ html {
 /* Selection */
 ::selection {
     background: rgba(0, 255, 136, 0.3);
+    color: #0a0a0a;
+}
+
+.dark ::selection {
     color: #fafafa;
 }
 
