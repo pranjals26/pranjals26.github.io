@@ -1,0 +1,271 @@
+/* Custom Styles - Linear-inspired dark theme */
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 50%, #00ff88 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Background Grid Pattern */
+.bg-grid {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: #00ff88;
+    color: #0a0a0a;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #fafafa;
+    font-weight: 500;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+/* Stat Card */
+.stat-card {
+    background: #111111;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    border-color: #00ff88;
+    transform: translateY(-2px);
+}
+
+/* Experience Card */
+.experience-card {
+    background: #111111;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.experience-card:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+/* Skill Badges */
+.skill-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    background: #111111;
+    border: 1px solid #1f1f1f;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    color: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    color: #888888;
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+/* Project Card */
+.project-card {
+    background: #111111;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Metric Badge */
+.metric-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem 0.75rem;
+    background: rgba(0, 255, 136, 0.05);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+/* Cert Card */
+.cert-card {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+.cert-card:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+/* Edu Card */
+.edu-card {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+/* Contact Card */
+.contact-card {
+    background: #111111;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-4px);
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ff88;
+}
+
+/* Selection */
+::selection {
+    background: rgba(0, 255, 136, 0.3);
+    color: #fafafa;
+}
+
+/* Nav Link Active State */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00ff88;
+    transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fade-in {
+        transform: translateY(10px);
+    }
+
+    .metric-badge {
+        align-items: center;
+    }
+}
+
+/* Focus States for Accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #00ff88;
+    outline-offset: 2px;
+}

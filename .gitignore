@@ -1,0 +1,25 @@
+# Dependencies
+.venv/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Build
+*.pyc
+__pycache__/
+
+# Claude
+.claude/
+
+# Temp
+*.tmp
+*.log
